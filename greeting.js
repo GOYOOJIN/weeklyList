@@ -19,14 +19,13 @@ function handleSubmit(event){
 }
 
 function writeName(name){
-  //form 삭제하고 h2보여주기.
   form.classList.remove(SHOW);
   greeting.classList.add(SHOW);
   greeting.innerText = `Halo ${name}`
 }
 
 function askName(){
-  //form 보여주고 이름 받기. 
+  //form가져와서 이름 받고 제출. 
   form.classList.add(SHOW);
   form.addEventListener("submit",handleSubmit);
 }
