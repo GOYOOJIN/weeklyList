@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>WeeklyList</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="index.css">
+  <title>WeeklyList</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="index.css"/>
 </head>
+
 <body>
-    <div class="weeklylist">
-        
+  <div class="weeklylist">
+    
+    <div class="js-clock">
+      <h2>Day Month date year</h2>
+      <h1>00:00:00</h1>
     </div>
+    
+    <form class="js-nameform nameform">
+      <input type="text" placeholder="What's your name?">
+    </form>
+    <h2 class="js-greeting greeting"></h2>
+    
+    <form class="js-todofrom todoform">
+      <input type="text" placeholder="What to do this week?">
+    </form>
+
+    <div class="js-todolists todolists">
+      <ul></ul>
+    </div>    
+    
+
+    <script src="greeting.js"></script>
+  </div>
 </body>
+
 </html>
