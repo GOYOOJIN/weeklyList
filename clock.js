@@ -4,7 +4,7 @@ timeSpace = clockdiv.querySelector("h1");
 
 function getDate(){  
   const date = new Date();
-  console.log(date); //Sun Jan 03 2021 17:38:47 GMT+0900 (대한민국 표준시)
+  //fconsole.log(date); //Sun Jan 03 2021 17:38:47 GMT+0900 (대한민국 표준시)
   const d = date.toString(); //문자열로 변환하여 substr사용.
   
 
