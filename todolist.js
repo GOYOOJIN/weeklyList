@@ -7,7 +7,12 @@ const todoarr = [];
 
 
 function writeTodos(todos){
-  
+  const li = document.createElement("li");
+  const delBtn = document.createElement("button");
+  delBtn.innerText = "F";
+  delBtn.addEventListener("click", dropTodo);
+  li.appendChild(delBtn);
+  todolists.appendChild(li);
 }
 
 function saveTodos(todos){  
