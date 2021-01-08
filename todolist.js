@@ -5,14 +5,27 @@ todolists = document.querySelector(".js-todolists");
 const TODOS = "todos";
 const todoarr = [];
 
+function dropTodo(){
+  
+}
 
 function writeTodos(todos){
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
+  const span = document.createElement("span");
+  let Id = Date.now();  
   delBtn.innerText = "F";
   delBtn.addEventListener("click", dropTodo);
+  li.appendChild(span);
   li.appendChild(delBtn);
+  li.id = Id;
   todolists.appendChild(li);
+  const todoObj = {
+    text: text,
+    id: Id
+  };
+  todoarr.push(todoObj);
+  saveTodos();
 }
 
 function saveTodos(todos){  
@@ -27,14 +40,17 @@ function handleSubmit(event){
 }
 
 function loadTodos(){
-  const loadTodos = localStorage.getItem(JSON.parse(TODOS));
-  for(i=0; loadTodos.length; i++){
-    writeTodos(loadTodos[i]);
+  const loadTodos = localStorage.getItem(TODOS);
+  if(loadTodos != null){
+    const jsonTodo = JSON.parse(loadTodos);
+    jsonTodos.forEach(function(Todo){
+      writeTodos(Todo.text);
+    })
   }
 }
 
 function init(){
   loadTodos();
-  
+  todoform.addEventListener("submit", handleSubmit);
 }
 init();
