@@ -5,10 +5,6 @@ todolists = document.querySelector(".js-todolists");
 const TODOS = "todos";
 const todoarr = [];
 
-function dropTodo(){
-  
-}
-
 function writeTodos(inputTodo){
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
